@@ -1,0 +1,19 @@
+{% extends 'core/base.html' %}
+{% block content %}
+  <main class="px-3">
+    <h1>DATADASH VIEW</h1>
+
+    {% if request.user.is_authenticated %}
+
+      <p class="lead" >{% if request.user.is_authenticated %}Bienvenido {{ user.username | upper }}, {% endif %}. INICIASTE Sesión CORRECTAMENTE !!!</p>
+
+    {% else %}
+
+      <p class="lead">Nuestra empresa bla bla bla</p>
+      <source type="imgs/img/antebrazo2.jpg">
+
+    {% endif %}
+
+   
+  </main>
+{% endblock %}
